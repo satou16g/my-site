@@ -40,46 +40,6 @@ const sortedPosts = posts
                 </div>
             </div>
         </SectionContainer>
-        <!-- Header/Hero Section -->
-        <SectionContainer class="projects--container">
-            <h2
-                class="font-medium text-h4 text-neutral-500 my-4 leading-8 tracking-tighter"
-            >
-                Products
-            </h2>
-            <CardGroup
-                class="grid scroll-m-24 gap-5 grid-cols-1 md:grid-cols-2 w-full"
-            >
-                {
-                    projectData.map((project) => (
-                        <Card
-                            key={project.id}
-                            className="col-span-1"
-                            link={project.link}
-                            target="_blank"
-                        >
-                            <CardBody>
-                                <CardImage
-                                    src={project.logo}
-                                    alt="Alternative text for photo"
-                                    imageClass="absolute top-0 right-0 m-6 p-4 bg-white rounded-3xl"
-                                    width={80}
-                                    height={80}
-                                />
-                                <div class="card-content absolute bottom-8 left-6 right-6">
-                                    <CardHeader class="">
-                                        {project.title}
-                                    </CardHeader>
-                                    <div class="content break-words  text-3xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500 ">
-                                        <p>{project.shortExcerpt}</p>
-                                    </div>
-                                </div>
-                            </CardBody>
-                        </Card>
-                    ))
-                }
-            </CardGroup>
-        </SectionContainer>
         <!--  Projects Container -->
         <SectionContainer class="blogs--container">
             <div class="flex flex-row my-4 items-center text-neutral-500">
