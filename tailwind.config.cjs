@@ -9,7 +9,7 @@ module.exports = {
             },
             fontSize: {
                 body: [
-                    "1rem",
+                    "1.125rem",
                     {
                         lineHeight: "1.5rem"
                     }
@@ -45,7 +45,7 @@ module.exports = {
                     }
                 ],
                 h6: [
-                    "1.25rem",
+                    "1.125rem",
                     {
                         lineHeight: "1.5rem"
                     }
