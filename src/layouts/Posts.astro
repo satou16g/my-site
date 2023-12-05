@@ -44,7 +44,7 @@ const breadcrumbList = currentUrlPath.split("/").slice(1);
             {
                 breadcrumbList.map((breadcrumb, index) =>
                     index + 1 === breadcrumbList.length ? (
-                        <h2 class="font-medium text-h4 text-neutral-500 my-4 leading-8 tracking-tighter">
+                        <h2 class="font-medium text-h4 text-neutral-500 my-4 leading-8 tracking-wide">
                             {breadcrumbList[0] === "blog" && "Blogs"}
                             <span class="ml-2 opacity-70 text-xl">
                                 {breadcrumbList[0] === "blog" &&

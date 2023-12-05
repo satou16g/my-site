@@ -4,8 +4,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                body: ["Inter", "Sans Serif"],
-                title: ["Inter", "Sans Serif"]
+                body: ["Zen Maru Gothic", "serif"],
+                title: ["Fleur De Leah", "serif"]
             },
             fontSize: {
                 body: [
