@@ -23,7 +23,7 @@ const sortedPosts = posts
 ---
 
 <Layout
-    title="INM"
+    title="16g"
     description="INM is where I share my everyday life and things I love."
 >
     <div
@@ -33,10 +33,15 @@ const sortedPosts = posts
             <div class="content-container">
                 <div class="page-title--content max-w-[54rem] mb-8 lg:mb-4">
                     <h1
-                        class="font-title text-4xl lg:text-3xl font-medium leading-8 lg:leading-10 tracking-wide lg:tracking-wide mb-0"
+                        class="inline font-title text-5xl lg:text-6xl font-medium leading-8 lg:leading-10 tracking-wide lg:tracking-wide mb-0"
                     >
-                        inm
+                        16g i n m  あかるい日陰
                     </h1>
+                    <div
+                        class="content text-1g md:text-1g font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                    >
+                         - Sunlit Shade
+                    </div>
                 </div>
             </div>
         </SectionContainer>
@@ -58,11 +63,11 @@ const sortedPosts = posts
                         <li class="flex flex-col gap-1">
                             <a
                                 href={`/blog/${post.slug}`}
-                                class="block w-full card-clip p-8 no-underline sm:flex-row sm:gap-8 bg-neutral-50 rounded-[40px] transition-all duration-300 hover:-top-0.5 relative"
+                                class="block w-full card-clip p-8 no-underline sm:flex-row sm:gap-8 bg-neutral-50 rounded-[30px] transition-all duration-300 hover:-top-0.5 relative"
                             >
                                 <span class="grid flex-1 gap-1">
                                     <span class="text-neutral-900 line-clamp-1 md:inline-flex items-center">
-                                        <span class="inline-block font-medium">
+                                        <span class="inline-block text-x1 font-medium">
                                             {post.data.title}
                                         </span>
                                         <span class="md:mb-0 my-2 md:my-0 md:ml-2 text-sm w-max md:w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 block md:inline-flex">
@@ -72,9 +77,6 @@ const sortedPosts = posts
                                                 />
                                             </span>
                                         </span>
-                                    </span>
-                                    <span class="text-neutral-500 line-clamp-2 ">
-                                        {post.data.description}
                                     </span>
                                 </span>
                             </a>
