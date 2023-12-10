@@ -11,7 +11,7 @@ module.exports = {
                 body: [
                     "1rem",
                     {
-                        lineHeight: "1.5rem"
+                        lineHeight: "1.75rem"
                     }
                 ],
                 h1: [
