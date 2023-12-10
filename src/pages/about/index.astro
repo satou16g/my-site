@@ -1,5 +1,17 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+const currentYear = new Date().getFullYear();
+
+const {
+    class: className,
+    title,
+    description,
+    keywords,
+    url,
+    twitterhandle,
+    image
+} = Astro.props;
 ---
 
 <Layout
