@@ -1,24 +1,16 @@
 {
-    "name": "astro-lane",
+    "name": "16g",
     "type": "module",
     "version": "1.2.0",
-    "description": "Lane - A personal portfolio landing template for developers and designers.",
+    "description": "16g - A personal blog.",
     "main": "index.astro",
     "private": false,
     "keywords": [
-        "astro",
-        "astrojs",
         "blog",
-        "reactjs",
-        "npx",
-        "npm",
-        "astro-react",
-        "framer",
-        "tailwindcss",
-        "tailwind"
+        "diary"
     ],
-    "author": "chrstnl",
-    "homepage": "https://www.chrstnl.com/",
+    "author": "SE",
+    "homepage": "https://www.erisato.com/",
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",

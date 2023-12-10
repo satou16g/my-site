@@ -1,5 +1,5 @@
 {
-    "extends": "astro/tsconfigs/base",
+    "extends": "astro/tsconfigs",
     "compilerOptions": {
         "strictNullChecks": true,
         "baseUrl": "src",
