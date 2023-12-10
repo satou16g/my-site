@@ -1,0 +1,10 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import { Image } from "@astrojs/image/components";
+import projectData from "@/data/projectData.json";
+import FormattedDate from "../../src/components/FormattedDate.astro";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon";
+import getSortedTags from "@/utils/getSortedTags";
+---
