@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                body: ["Zen Maru Gothic", "serif"],
+                body: ["Noto Sans JP", "sans-serif"],
                 title: ["Fleur De Leah", "serif"]
             },
             fontSize: {
