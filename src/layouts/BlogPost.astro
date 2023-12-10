@@ -27,7 +27,7 @@ const { Content } = await post.render();
     description={description}
     image={ogUrl}
 >
-    <SectionContainer class="wrap wrap-px flex justify-center px-4 sm:gap-8 sm:px-8">
+    <SectionContainer class="wrap wrap-px flex justify-center px-4 sm:gap-16 sm:px-8">
         <div class="flex mt-32 w-full">
             <div class="content--container flex-1 md:pr-6 w-full">
                 <article
@@ -41,12 +41,12 @@ const { Content } = await post.render();
                         Back
                     </a>
                     <div class="post--title">
-                        <h1 class="text-3xl md:text-4xl">
+                        <h1 class="text-3xl md:text-3xl">
                             {title}
                         </h1>
                     </div>
                     <span
-                        class="mb-4 tracking-wide w-max md:w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 block md:inline-flex"
+                        class="mb-4 tracking-wider w-max md:w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 block md:inline-flex"
                     >
                         <span class="px-2">
                             <FormattedDate date={pubDate} />
@@ -71,7 +71,7 @@ const { Content } = await post.render();
                         )
                     }
                     <div
-                        class="prose-code:whitespace-pre-wrap prose-code:break-words prose-code:overflow-x-auto text-base tracking-wider"
+                        class="prose-code:whitespace-pre-wrap prose-code:break-words prose-code:overflow-x-auto text-sm tracking-wider"
                     >
                         <Content />
                     </div>
