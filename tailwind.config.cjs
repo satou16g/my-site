@@ -9,7 +9,7 @@ module.exports = {
             },
             fontSize: {
                 body: [
-                    "1.125rem",
+                    "1rem",
                     {
                         lineHeight: "1.5rem"
                     }
