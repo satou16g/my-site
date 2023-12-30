@@ -1,7 +1,7 @@
 ---
 title: "日焼け止め2023"
 description: "日焼け止めはスキンケアの基本なので結構こだわりがある。"
-pubDate: 2023-4-08
+pubDate: 2023-04-08
 heroImage: ""
 featured: true
 draft: false
