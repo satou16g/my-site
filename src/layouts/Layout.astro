@@ -1,0 +1,68 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <SEO /> component.
+import "../styles/globals.scss";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SEO from "@/components/seo/SEO.astro";
+import { Icon } from "astro-icon";
+import { SOCIALS } from "@config";
+
+const currentYear = new Date().getFullYear();
+
+const {
+    class: className,
+    title,
+    description,
+    keywords,
+    url,
+    twitterhandle,
+    image
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <SEO
+            title={title}
+            description={description}
+            keywords={keywords}
+            url={url}
+            image={image}
+        />
+    </head>
+    <body>
+        <main class={className}>
+            <slot />
+        </main>
+
+        <SectionContainer class="mt-24">
+            <footer class="py-20 bg-neutral-50">
+                <div class="wrap-sm mx-auto px-8 grid gap-16">
+                    <div class="footer-credits text-neutral-500 text-center">
+                        <a
+                            class="text-base font-medium mb-2 md:mb-8 lg:mb-4 leading-10 tracking-wide relative hover:underline hover:-top-0.5 hover:text-skin-accent hover:text-black focus-visible:p-1"
+                            href="/about/"
+                        >
+                            ABOUT</a>
+                         / 
+                        <a
+                            class="text-base font-medium mb-2 md:mb-8 lg:mb-4 leading-10 tracking-wide relative hover:underline hover:-top-0.5 hover:text-skin-accent hover:text-black focus-visible:p-1"
+                            href="https://forms.gle/NuSCBGQKP34LQ6RJ9"
+                        >
+                            CONTACT
+                        </a>
+                    </div>
+                    <span
+                        class="text-base text-neutral-500 tracking-wide text-md flex flex-wrap gap-4 md:gap-0 md:justify-between"
+                    >
+                        <span>Copyright © {currentYear} 16g</span>
+                        <a class="" target="_blank" href="/privacy-policy/">
+                            Privacy Policy
+                        </a>
+                    </span>
+                </div>
+            </footer>
+        </SectionContainer>
+    </body>
+</html>
