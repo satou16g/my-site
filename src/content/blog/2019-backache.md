@@ -1,7 +1,7 @@
 ---
 title: "プチぎっくり背中"
 description: "この間初めてぎっくり腰的なことをやったので書いておく。"
-pubDate: 2019-5-22
+pubDate: 2019-05-22
 heroImage: ""
 featured: true
 draft: false

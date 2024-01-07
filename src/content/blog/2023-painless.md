@@ -1,7 +1,7 @@
 ---
 title: "無痛生活"
 description: "注射が本当に苦手。"
-pubDate: 2023-1-21
+pubDate: 2023-01-21
 heroImage: ""
 featured: true
 draft: false
