@@ -73,6 +73,13 @@ export const SOCIALS: SocialMediaObjects = [
         active: false
     },
     {
+        name: "Snapchat",
+        href: "https://github.com/christian-luntok/astro-lane/",
+        icon: "",
+        title: `${SITE.title} on Snapchat`,
+        active: false
+    },
+    {
         name: "CodePen",
         href: "https://github.com/christian-luntok/astro-lane/",
         icon: "",
