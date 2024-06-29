@@ -54,7 +54,7 @@ module.exports = {
         transparent: "transparent",
       },
       fontFamily: {
-        mono: ["BIZ UDGothic", "sans-serif"],
+        sans: ["BIZ UDGothic", "sans-serif"],
       },
 
       typography: {
