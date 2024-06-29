@@ -29,7 +29,7 @@
     display: block;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
@@ -92,6 +92,10 @@
 
   /* ===== scrollbar ===== */
   html {
+    font-size: 17pt;
+    font-family: "BIZ UDGothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     overflow-y: scroll;
   }
 
