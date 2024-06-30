@@ -1,8 +1,8 @@
 import { LOCALE } from "@config";
 
 interface DatetimesProps {
-  pubDatetime: string ;
-  modDatetime: string ;
+  pubDatetime: string | Date;
+  modDatetime: string | Date | undefined | null;
 }
 
 interface Props extends DatetimesProps {
@@ -64,9 +64,6 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   return (
     <>
       <time dateTime={myDatetime.toISOString()}>{date}</time>
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      <span className="text-nowrap">{time}</span>
     </>
   );
 };
