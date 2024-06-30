@@ -29,17 +29,10 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "Biz UDPGothic",
+      name: "Noto Sans JP",
       data: fontRegular,
-      weight: 400,
       style: "normal",
-    },
-    {
-      name: "BIZ UDPGothic",
-      data: fontBold,
-      weight: 600,
-      style: "normal",
-    },
+    }
   ],
 };
 

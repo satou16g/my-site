@@ -99,6 +99,8 @@
   }
 
   body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-style: normal;
     letter-spacing: 0.05em;
   }
 
