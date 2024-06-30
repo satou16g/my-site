@@ -28,21 +28,15 @@
   html[data-theme="dark"] #sun-svg {
     display: block;
   }
+
+  body {
+    font-family: "BIZ UDPGothic", sans-serif;
+    font-style: normal;
+  }
+
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
-  }
-
-  body.biz-udpgothic-regular {
-    font-family: "BIZ UDPGothic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  body.biz-udpgothic-bold {
-    font-family: "BIZ UDPGothic", sans-serif;
-    font-weight: 700;
-    font-style: normal;
   }
 
   section,
