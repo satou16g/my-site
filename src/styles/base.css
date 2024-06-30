@@ -33,11 +33,6 @@
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
 
- body {
-    font-family: "BIZ UDPGothic", sans-serif;
-    font-style: normal;
-  }
-
   section,
   footer {
     @apply mx-auto max-w-3xl px-4;
