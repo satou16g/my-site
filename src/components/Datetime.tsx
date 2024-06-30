@@ -36,7 +36,7 @@ export default function Date({
 }
 
 const FormattedDatetime = ({ pubDatetime }: DatetimesProps) => {
-  const myDatetime = new Date(pubDatetime);
+  const myDatetime = new Datetime(pubDatetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
     year: "numeric",
