@@ -30,7 +30,14 @@ const options: SatoriOptions = {
   fonts: [
     {
       name: "Biz UDPGothic",
+      data: fontRegular,
       weight: 400,
+      style: "normal",
+    },
+    {
+      name: "BIZ UDPGothic",
+      data: fontBold,
+      weight: 600,
       style: "normal",
     },
   ],

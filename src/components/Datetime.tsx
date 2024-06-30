@@ -35,7 +35,7 @@ export default function Datetime({
   );
 }
 
-const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
+const FormattedDatetime = ({ pubDatetime }: DatetimesProps) => {
   const myDatetime = new Date(pubDatetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
@@ -50,8 +50,6 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   });
 
   return (
-    <>
-      <time dateTime={myDatetime.toISOString()}>{date}</time>
-    </>
+    <time dateTime={myDatetime.toISOString()}>{date}</time>
   );
 };
