@@ -21,15 +21,13 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       <a
         href={href}
         className="inline-block mb-2 text-sm font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-        class="inline-block"
       >
         {secHeading ? (
           <h2 {...headerProps}>{title}</h2>
         ) : (
           <h3 {...headerProps}>{title}</h3>
         )}
-      </a>
-      <Datetime pubDatetime={pubDatetime} />
+      </a> <Datetime pubDatetime={pubDatetime} />
     </li>
   );
 }
