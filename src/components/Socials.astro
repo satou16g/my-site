@@ -10,14 +10,12 @@ export interface Props {
 const { centered = false } = Astro.props;
 ---
 
-<div class={`social-icons ${centered ? "flex" : ""}`}>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSFhuznzVAg2KQUvdHSWodtmQ9eVLSxSMEyXN_lzWOHB6bxg/viewform?usp=sf_link" 
-    font-size="0.25rem"
-  >
+<div class={`social-icons ${centered ? "flex" : ""}`} font-size="0.25rem">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSFhuznzVAg2KQUvdHSWodtmQ9eVLSxSMEyXN_lzWOHB6bxg/viewform?usp=sf_link" >
   CONTACT
   </a>
   &nbsp;/&nbsp;
-  <a href="/privacy/" font-size="0.25rem">
+  <a href="/privacy/">
   Privacy Policy
   </a>
 </div>
