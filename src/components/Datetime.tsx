@@ -9,7 +9,7 @@ interface Props extends DatetimesProps {
   className?: string;
 }
 
-export default function Datetime({
+export default function Date({
   pubDatetime,
   size = "sm",
   className,
@@ -35,7 +35,7 @@ export default function Datetime({
   );
 }
 
-const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
+const FormattedDatetime = ({ pubDatetime }: DatetimesProps) => {
   const myDatetime = new Date(pubDatetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
