@@ -103,8 +103,8 @@
     letter-spacing: 0.1em;
   }
 
-  .tag {
-    letter-spacing: 0.3em;
+  .scale-75 {
+    margin-right: -0.25em;
   }
 
   /* width */
