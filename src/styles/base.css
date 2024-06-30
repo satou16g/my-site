@@ -102,6 +102,10 @@
     font-style: normal;
   }
 
+  .tag {
+    margin-left: 0.5em;
+  }
+
   /* width */
   ::-webkit-scrollbar {
     @apply w-3;
