@@ -50,8 +50,8 @@ const FormattedDatetime = ({ pubDatetime }: DatetimesProps) => {
   });
 
   return (
-
+    <>
       <time dateTime={myDatetime.toISOString()}>{date}</time>
-
+    </>
   );
 };
