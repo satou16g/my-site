@@ -5,7 +5,7 @@ slug: 無痛生活
 featured: true
 draft: false
 tags:
-  - 健康
+  - 健康・美容
 description:
   注射が本当に苦手。
 ---

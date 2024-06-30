@@ -5,7 +5,7 @@ slug: プチぎっくり背中
 featured: true
 draft: false
 tags:
-  - 健康
+  - 健康・美容
 description:
   この間初めてぎっくり腰的なことをやったので書いておく。
 ---

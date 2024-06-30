@@ -5,7 +5,6 @@ slug: これから着る服
 featured: true
 draft: false
 tags:
-  - ファッション
   - 衣服
 description:
   ポスト・コロナ禍、何を着よう。

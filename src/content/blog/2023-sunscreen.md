@@ -5,7 +5,8 @@ slug: 日焼け止め2023
 featured: true
 draft: false
 tags:
-  - コスメ
+  - 健康・美容
+  - スキンケア
 description:
   日焼け止めはスキンケアの基本なので結構こだわりがある。
 ---

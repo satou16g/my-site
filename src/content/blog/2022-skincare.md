@@ -6,7 +6,7 @@ featured: true
 draft: false
 tags:
   - スキンケア
-  - コスメ
+  - 健康・美容
 description:
   最近のスキンケアが固まってきたのでメモ。
 ---

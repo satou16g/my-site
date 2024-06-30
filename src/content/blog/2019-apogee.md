@@ -6,9 +6,7 @@ featured: true
 draft: false
 tags:
   - APOGEE
-  - ライブ
   - 音楽
-  - バンド
 description:
   APOGEEワンマンライブ2019『CHRONICLE』に行ってきました。昨年のライブですでに発表されていたけれど、この日でベースの内垣さんはAPOGEEを脱退することが決まっていた。そのため、タイトルにもあるとおり、まさにAPOGEEの歴史を紡ぐようなセットリストだった。
 ---
