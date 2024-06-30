@@ -36,7 +36,7 @@ export default function Datetime({
       )}
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
         <FormattedDatetime
-          pubDatetime={pubDatetime}
+          pubDatetime={ pubDatetime }
         />
       </span>
     </div>
@@ -44,7 +44,8 @@ export default function Datetime({
 }
 
 const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
-  const myDatetime = new Date( pubDatetime );
+  const myDatetime = new Date( pubDatetime ? pubDatetime
+  );
 
   const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
     year: "numeric",
