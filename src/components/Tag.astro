@@ -22,7 +22,7 @@ const { tag, size = "sm" } = Astro.props;
     <a
     href={`/tags/${tag}/`}
     transition:name={tag}
-    class={`${size === "sm" ? "text-xs" : "text-base"} pr-2 group`}
+    class={`${size === "sm" ? "text-base" : "text-lg"} pr-2 group`}
   >
     <span>{tag}</span>
   </a>
