@@ -5,7 +5,6 @@ slug: ウルウルの冬にしたい
 featured: true
 draft: false
 tags:
-  - 家電・インテリア
   - 住む
 description:
   夏はあんなに湿度の高さに悩まされていたのに、冬は乾燥に悩まされている
