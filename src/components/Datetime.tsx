@@ -35,7 +35,7 @@ export default function Datetime({
   );
 }
 
-const FormattedDatetime = ({ pubDatetime }: DatetimesProps) => {
+const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   const myDatetime = new Date(pubDatetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
