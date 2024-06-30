@@ -30,11 +30,6 @@
   }
 
   body {
-    font-family: "BIZ UDPGothic", sans-serif;
-    font-style: normal;
-  }
-
-  body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
@@ -100,6 +95,11 @@
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;
+  }
+
+  body {
+    font-family: "BIZ UDPGothic", sans-serif;
+    font-style: normal;
   }
 
   /* width */
