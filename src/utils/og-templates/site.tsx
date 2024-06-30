@@ -63,8 +63,8 @@ export default () => {
               textAlign: "center",
             }}
           >
-            <p style={{ fontSize: 72, fontWeight: "bold" }}>{SITE.title}</p>
-            <p style={{ fontSize: 28 }}>{SITE.desc}</p>
+            <p style={{ fontSize: 64, fontWeight: "bold" }}>{SITE.title}</p>
+            <p style={{ fontSize: 20 }}>{SITE.desc}</p>
           </div>
 
           <div
@@ -73,7 +73,7 @@ export default () => {
               justifyContent: "flex-end",
               width: "100%",
               marginBottom: "8px",
-              fontSize: 28,
+              fontSize: 20,
             }}
           >
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
