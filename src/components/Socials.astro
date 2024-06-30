@@ -11,17 +11,15 @@ const { centered = false } = Astro.props;
 ---
 
 <div class={`social-icons ${centered ? "flex" : ""}`}>
-  <a class="footer-font"
-  href="https://docs.google.com/forms/d/e/1FAIpQLSfSFhuznzVAg2KQUvdHSWodtmQ9eVLSxSMEyXN_lzWOHB6bxg/viewform?usp=sf_link"
-  >
-  CONTACT
-  </a>
-  &nbsp;/&nbsp;
-  <a class="footer-font"
-  href="/privacy/"
-  >
-  Privacy Policy
-  </a>
+  <span class="footer-font">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSFhuznzVAg2KQUvdHSWodtmQ9eVLSxSMEyXN_lzWOHB6bxg/viewform?usp=sf_link">
+      CONTACT
+    </a>
+    &nbsp;/&nbsp;
+    <a href="/privacy/">
+      Privacy Policy
+    </a>
+  </span>
 </div>
 
 <style>
