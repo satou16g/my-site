@@ -1,35 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "milkroll",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^0.16.0",
-    "@astrojs/preact": "^2.0.1",
-    "@astrojs/rss": "^2.0.0",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/svelte": "^2.0.1",
-    "@astrojs/tailwind": "^3.0.1",
-    "@vercel/analytics": "^0.1.8",
-    "astro": "^2.0.10",
-    "mdast-util-to-string": "^3.1.0",
-    "preact": "^10.11.3",
-    "reading-time": "^1.5.0",
-    "svelte": "^3.55.1",
-    "tailwindcss": "^3.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
-  }
-=======
     "name": "astro-theme-panda",
     "type": "module",
     "version": "0.1.0",
@@ -74,5 +43,4 @@
         "unist-util-visit": "latest",
         "unocss": "latest"
     }
->>>>>>> 5d7ddc5 (tag)
 }

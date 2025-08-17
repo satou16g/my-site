@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-  "extends": "astro/tsconfigs/strict"
-=======
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "baseUrl": ".",
@@ -19,5 +16,4 @@
     "src/**/*.ts",
     "src/**/*.astro"
   ]
->>>>>>> 5d7ddc5 (tag)
 }
