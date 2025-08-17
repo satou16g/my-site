@@ -1,0 +1,77 @@
+---
+import BlogCard from "../../components/BlogCard.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../*.mdx");
+
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags?.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout
+  title={`milk roll | #${tag}`}
+  description={`Posts tagged with ${tag}`}
+  footer={true}
+>
+  <main>
+    <div class="text-center text-xl md:text-3xl">
+      <h1 class="font-thin mb-4">
+        Posts tagged with <span class="font-bold text-neutral-800">{tag}</span>
+      </h1>
+      <h2 class="mb-8">
+        <a href="/" class="text-black hover:text-neutral-700">
+          &larr; All posts</a
+        >
+      </h2>
+    </div>
+    <div class="flex flex-col justify-center items-center space-y-6">
+      {
+        posts.map(
+          (
+            post: {
+              frontmatter: {
+                minutesRead: any;
+                title: any;
+                description: any;
+                pubDate: any;
+              };
+              url: any;
+            },
+            idx: number
+          ) => (
+            <>
+              <BlogCard
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+                pubDate={post.frontmatter.pubDate}
+                readTime={post.frontmatter.minutesRead}
+                link={post.url}
+                image={post.frontmatter.image}
+                tags={post.frontmatter.tags}
+              />
+              {idx !== posts.length - 1 && (
+                <hr class="border w-full border-t-black" />
+              )}
+            </>
+          )
+        )
+      }
+    </div>
+  </main>
+</Layout>

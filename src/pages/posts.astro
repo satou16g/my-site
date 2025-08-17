@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogCard from "../components/BlogCard.astro";
+
+// get all blog posts, filter out drafts, and sort by pubDate
+const blogPosts = (await Astro.glob("./*.{md,mdx}"))
+  .filter((post) => !post.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+
+// alphabetical tags with the count of posts with that tag
+const tagCounts = blogPosts
+  .map((post) => post.frontmatter.tags)
+  .flat()
+  .reduce((acc, tag) => {
+    if (acc[tag]) {
+      acc[tag] += 1;
+    } else {
+      acc[tag] = 1;
+    }
+    return acc;
+  }, {});
+---
+
+<Layout
+  title="milk roll | all posts"
+  description="milk roll is a blog by cade cuddy. It's about software, adventure, and life."
+>
+  <main>
+    <div
+      class="flex justify-center text-md md:text-lg items-center mt-4 space-x-3 font-mono font-bold mx-auto mb-7 max-w-sm md:max-w-lg"
+    >
+      <div
+        class="grid grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-10 sm:text-left text-center"
+      >
+        {
+          tagCounts &&
+            Object.keys(tagCounts).map((tag) => (
+              <a
+                href={`/tags/${tag}`}
+                class="hover:underline decoration-emerald-500
+              "
+              >
+                {tag}({tagCounts[tag]})
+              </a>
+            ))
+        }
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center space-y-6">
+      {
+        blogPosts.map((post) => (
+          <BlogCard
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            pubDate={post.frontmatter.pubDate}
+            readTime={post.frontmatter.minutesRead}
+            link={post.url}
+            image={post.frontmatter.image}
+            tags={post.frontmatter.tags}
+          />
+        ))
+      }
+    </div>
+  </main>
+</Layout>

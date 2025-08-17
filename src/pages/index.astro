@@ -1,96 +1,47 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import LinkButton from "@components/LinkButton.astro";
-import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
-import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS } from "@config";
+import Layout from "../layouts/Layout.astro";
+import BlogCard from "../components/BlogCard.astro";
 
-const posts = await getCollection("blog");
+// take the 5 most recent posts
+const blogPosts = (await Astro.glob("./*.{md,mdx}"))
+  .filter((post) => !post.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .slice(0, 3);
 
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => data.featured);
-
-const socialCount = SOCIALS.filter(social => social.active).length;
+const tags = [
+  ...new Set(blogPosts.map((post) => post.frontmatter.tags).flat()),
+];
 ---
 
-<Layout>
-  <Header />
-  <main id="main-content">
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h3>Recent Posts</h3>
-          <ul>
-            {recentPosts.map(
-              ({ data, slug }, index) =>
-                index < 7 && (
-                  <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
+<Layout
+  title="milk roll"
+  description="milk roll is a blog by cade cuddy. It's about software, life, and everything in-between."
+  footer={true}
+>
+  <main>
+    <div class="flex flex-col justify-start space-y-6">
+      {
+        blogPosts.map((post, idx) => (
+          <>
+            <BlogCard
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+              pubDate={post.frontmatter.pubDate}
+              readTime={post.frontmatter.minutesRead}
+              link={post.url}
+              tags={post.frontmatter.tags}
+              image={post.frontmatter.image}
+            />
+            {idx !== blogPosts.length - 1 && (
+              <hr class="border w-full border-t-black" />
             )}
-          </ul>
-        </section>
-      )
-    }
-
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
+          </>
+        ))
+      }
     </div>
   </main>
-
-  <Footer />
 </Layout>
-
-<style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-2xl font-bold sm:my-8 sm:text-4xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
-  }
-  #featured h2,
-  #recent-posts h2 {
-    @apply text-xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
-  }
-</style>
