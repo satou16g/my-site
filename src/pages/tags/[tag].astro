@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import BlogCard from "../../components/BlogCard.astro";
 import Layout from "../../layouts/Layout.astro";
 
@@ -75,3 +76,33 @@ const { posts } = Astro.props;
     </div>
   </main>
 </Layout>
+=======
+import BlogListLayout from '@layouts/BlogListLayout.astro'
+export const prerender = true
+
+export async function getStaticPaths() {
+    const posts = await Astro.glob('../../content/posts/**/*.{md,mdx}')
+    const tags = [
+        ...new Set(
+            posts
+                .filter((i) => i.frontmatter.tags)
+                .map((i) => i.frontmatter.tags)
+                .flat()
+        )
+    ]
+    return tags.map((tag) => {
+        return {
+            params: {
+                tag: tag.replace(/\s/g, '-')
+            },
+            props: {
+                tag
+            }
+        }
+    })
+}
+const { tag } = Astro.props
+---
+
+<BlogListLayout tag={tag} category="" />
+>>>>>>> 5d7ddc5 (tag)

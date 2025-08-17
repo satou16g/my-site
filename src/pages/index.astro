@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from "../layouts/Layout.astro";
 import BlogCard from "../components/BlogCard.astro";
 
@@ -45,3 +46,11 @@ const tags = [
     </div>
   </main>
 </Layout>
+=======
+import BlogListLayout from '@layouts/BlogListLayout.astro'
+
+export const prerender = true
+---
+
+<BlogListLayout tag="" category="" />
+>>>>>>> 5d7ddc5 (tag)

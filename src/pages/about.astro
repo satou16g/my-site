@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -52,3 +53,11 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </Layout>
+=======
+import MDI18nLayout from '@layouts/MDI18nLayout.astro'
+import { useLocale } from '@utils/locale'
+const { t } = useLocale(Astro.url)
+const posts = await Astro.glob('../content/about/*.md')
+---
+<MDI18nLayout title={t('nav.recent')} slug="about" posts={posts} />
+>>>>>>> 5d7ddc5 (tag)
