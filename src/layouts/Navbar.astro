@@ -17,8 +17,7 @@ function isRootPage() {
             rel="prefetch"
             href={path('/')}
             class="panda-link mr-4 animated hover:no-underline"
-            class:list={isRootPage() ? 'active' : ''}>{t('nav.posts')}</a
-    >
+            class:list={isRootPage() ? 'active' : ''}>{t('nav.posts')}</a>
     {
         items.map((item) => {
             return (
