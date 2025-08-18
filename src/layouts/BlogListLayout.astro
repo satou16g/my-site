@@ -73,16 +73,7 @@ function getTitle(post) {
 
         <div class="mt-6">
             {
-                [...tags].map((tag) => {
-                    return (
-                        <a
-                            class="mr-1 text-sm panda-link my-1 hover:font-bold"
-                            href={'/tags/' + slugifySpace(tag) + '/'}
-                        >
-                            #{t('tags.' + tag)}
-                        </a>
-                    )
-                })
+                
             }
         </div>
     </main>
