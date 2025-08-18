@@ -17,7 +17,7 @@ export function formatDateMD(dateStr: string, locale: string = 'zh') {
     if (locale === 'en') {
         return date.setLocale(locale).toFormat('dd, MMM')
     }
-    return date.toFormat('MM-dd')
+    return date.toFormat('MM/dd')
 }
 
 export function formatDateYMD(dateString: string, locale: string = 'zh') {
@@ -26,7 +26,7 @@ export function formatDateYMD(dateString: string, locale: string = 'zh') {
     if (locale === 'en') {
         return date.setLocale(locale).toFormat('dd, MMM, yyyy')
     }
-    return date.toFormat('yyyy-MM-dd')
+    return date.toFormat('yyyy/MM/dd')
 }
 
 export function slugifySpace(old: string) {
