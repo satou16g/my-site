@@ -93,13 +93,5 @@ const title = locale === 'en' && FrontMatter['title-en'] ? FrontMatter['title-en
     <article class="prose dark:prose-invert prose-stone max-w-prose mt-6">
         <slot/>
     </article>
-    {
-        FrontMatter.pubDate !== FrontMatter.lastModified && (
-                    <div class="mt-9 flex text-sm font-italic opacity-80">
-                <span class="ml-auto">
-                    {t('post.last_modified_at')} {formatDateYMD(FrontMatter.lastModified)}
-                </span>
-                    </div>
-        )
-    }
+    
 </Layout>
