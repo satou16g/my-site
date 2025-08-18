@@ -49,10 +49,12 @@ export default defineConfig({
         sitemap(),
         expressiveCode({
             themes: [nightOwlDark, nightOwlLight],
-            // ここにdefaultThemeを追加
+            // デフォルトテーマを 'nightOwlLight' に設定
             defaultTheme: 'nightOwlLight',
+            // CSSセレクタをテーマのタイプ（light/dark）に合わせる
             themeCssSelector: (theme) => {
-                return '.' + theme.type
+                // nightOwlLight のタイプは 'light'
+                return `[data-theme='${theme.type}']`
             }
         }),
         mdx(),
