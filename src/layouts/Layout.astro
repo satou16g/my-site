@@ -33,9 +33,7 @@ const fullTitle = `${title} - ${defaultTitle}`
         <title>{fullTitle}</title>
     </head>
     <body class="max-width dark:bg-stone-700">
-        <Header />
-        {navbar && <Navbar />}
-        <main >
+        <Header />{navbar && <Navbar />}<main>
             <slot />
         </main>
         <Footer />
