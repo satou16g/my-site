@@ -39,7 +39,7 @@ export default defineConfig({
     },
     markdown: {
         syntaxHighlight: false,
-        remarkPlugins: [remarkDirective, RDNotePlugin, RDBilibiliPlugin, remarkModifiedTime, remarkPanGu],
+        remarkPlugins: [remarkDirective, RDNotePlugin, RDBilibiliPlugin, remarkModifiedTime],
         remarkRehype: {
             footnoteLabel: ' '
         }
