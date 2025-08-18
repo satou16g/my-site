@@ -10,7 +10,6 @@ img {
 time,
 div {
     color: rgb(var(--color-text-heading));
-    font-variant-numeric: tabular-nums;
 }
 
 .panda-link-static {
