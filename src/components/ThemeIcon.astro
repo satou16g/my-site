@@ -30,19 +30,27 @@
 
     function setup() {
         let current_theme = 'light'; // デフォルト値をlightに設定
+
+        // ローカルストレージにテーマが保存されていればそれを優先
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
             current_theme = localStorage.getItem('theme')
         }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        
+        // システム設定は、ローカルストレージに値がない場合にのみ使用
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             current_theme = 'dark'
         }
-        current_theme = current_theme || 'light'
+
+        // HTML要素のクラスを更新
         if (current_theme === 'light') {
             document.documentElement.classList.remove('dark')
         } else {
             document.documentElement.classList.add('dark')
         }
+        
+        // ローカルストレージにテーマを保存
         window.localStorage.setItem('theme', current_theme)
+        
         // button event bind
         document.getElementById('themeToggle').addEventListener('click', handleToggleClick)
     }
