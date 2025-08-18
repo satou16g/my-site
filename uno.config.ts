@@ -17,7 +17,17 @@ export default defineConfig({
                     'font-size': '.9em',
                     // add underline offset
                     'text-decoration-thickness': '0.1em',
-                    'text-decoration-color': 'rgb(var(--color-text-link))'
+                    'text-decoration-color': 'rgb(var(--color-text-link))',
+                    // 太字の継承を許可
+                    'font-weight': 'inherit'
+                },
+                // 太字内のリンクスタイル
+                'strong a, b a': {
+                    'font-weight': 'bold'
+                },
+                // リンク内の太字スタイル
+                'a strong, a b': {
+                    'font-weight': 'bold'
                 },
                 // li word-break reference: issue #3
                 'li':{
@@ -38,7 +48,9 @@ export default defineConfig({
                     content: 'none'
                 },  
                 'a:hover': {
-                    color: 'rgb(var(--color-text-link-hover))'
+                    color: 'rgb(var(--color-text-link-hover))',
+                    // ホバー時も太字を維持
+                    'font-weight': 'inherit'
                 },
                 'pre code': {
                     margin: '0.2rem',
