@@ -8,7 +8,7 @@
 
 <br>
 
-<span style="font-size: 0.8em; color: #ccc;" >
+<span style="font-size: 0.8em; color: #999;" >
 プライバシーポリシー、免責事項  
 
 ●個人情報の収集と利用  
