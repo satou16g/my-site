@@ -6,7 +6,7 @@
 
 東北出身・東京在住。漫画と配信を見るのが好き。
 
-<br>&nbsp;
+<br>
 
 <span style="font-size: 0.8em; color: #ccc;" >
 プライバシーポリシー、免責事項  
