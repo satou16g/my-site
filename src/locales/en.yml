@@ -12,7 +12,7 @@ footer:
     inspired-by: Inspired by
 post:
     back: Back
-    post_at: Posted at
+    post_at: - 
     last_modified_at: Last modified at
 message:
     404-content: Page not found
