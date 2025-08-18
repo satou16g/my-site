@@ -57,4 +57,8 @@ export default defineConfig({
         partytown()
     ],
     output: 'static',
+    image: {
+        service: {
+          entrypoint: 'astro/assets/services/sharp',
+        },
 })

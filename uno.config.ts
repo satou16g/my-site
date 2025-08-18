@@ -7,6 +7,10 @@ export default defineConfig({
     mode: 'per-module',
     injectEntry: process.env['NODE_ENV'] === 'development',
     transformers: [transformerDirectives()],
+    image: {
+        service: {
+          entrypoint: 'astro/assets/services/sharp',
+        },
     presets: [
         presetMini(),
         presetTypography({
