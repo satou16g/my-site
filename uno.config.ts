@@ -13,11 +13,11 @@ export default defineConfig({
             cssExtend: {
                 'a': {
                     // no underline
-                    textDecoration: 'none',
+                    'text-decoration': 'none',
                     'font-size': '.9em',
                     // add underline offset
-                    textDecorationThickness: '0.1em',
-                    textDecorationColor: 'rgb(var(--color-text-link))'
+                    'text-decoration-thickness': '0.1em',
+                    'text-decoration-color': 'rgb(var(--color-text-link))'
                 },
                 // li word-break reference: issue #3
                 'li':{
