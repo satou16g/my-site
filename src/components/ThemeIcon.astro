@@ -29,7 +29,7 @@
     }
 
     function setup() {
-        let current_theme
+        let current_theme = 'light'; // デフォルト値をlightに設定
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
             current_theme = localStorage.getItem('theme')
         }
