@@ -57,8 +57,10 @@ export default defineConfig({
         partytown()
     ],
     output: 'static',
+    // 画像処理の設定
     image: {
         service: {
-          entrypoint: 'astro/assets/services/sharp',
+            entrypoint: 'astro/assets/services/sharp',
         },
+    }
 })
