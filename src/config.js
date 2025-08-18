@@ -9,6 +9,6 @@ export const PandaConfig = {
         { title: 'about', url: '/about/' }
     ],
     footer: [
-        
+        {  }
     ]
 }
