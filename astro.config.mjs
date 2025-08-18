@@ -49,6 +49,8 @@ export default defineConfig({
         sitemap(),
         expressiveCode({
             themes: [nightOwlDark, nightOwlLight],
+            // ここにdefaultThemeを追加
+            defaultTheme: 'nightOwlLight',
             themeCssSelector: (theme) => {
                 return '.' + theme.type
             }
