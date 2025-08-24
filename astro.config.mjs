@@ -67,11 +67,4 @@ export default defineConfig({
             entrypoint: 'astro/assets/services/sharp',
         },
     }
-    i18n: {
-        defaultLocale: 'ja', // ★ ここを 'ja' に変更
-        locales: ['ja', 'en'], // ★ 優先順位を考慮して 'ja' を先頭に
-        routing: {
-          prefixDefaultLocale: false,
-        },
-      },
 })
