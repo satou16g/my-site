@@ -8,7 +8,8 @@
 
 ### Category
 <a href="https://www.erisato.com/categories/日記">日記</a>
-<a href="https://www.erisato.com/categories/%E6%97%A5%E8%A8%98/">日記</a>
+<a href="https://www.erisato.com/categories/買い物/">買い物</a>
+<a href="https://www.erisato.com/categories/健康・美容/">健康・美容</a>
 
 <br>
 
