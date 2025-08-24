@@ -9,7 +9,7 @@ const { defaultLocale } = PandaConfig
 // This is a simple i18n implementation
 const useLocalePath = (lang: string) => {
     lang ??= ''
-    if (lang === 'zh') {
+    if (lang === 'ja') {
         lang = ''
     }
     lang = '' // force to default language
@@ -22,9 +22,9 @@ const useLocalePath = (lang: string) => {
 }
 
 const useTranslation = (lang: string) => {
-    if (!lang) lang = 'zh'
+    if (!lang) lang = 'ja'
     return (key: string) => {
-        const data = lang === 'zh' ? [zh, en] : [en, zh]
+        const data = lang === 'ja' ? [ja, en] : [en, ja]
         const r = get(data[0], key)
         if (!r) {
             console.warn(`Translation for "${key}" not found`)
