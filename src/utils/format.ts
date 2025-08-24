@@ -2,7 +2,7 @@ import { DateTime } from 'luxon'
 import { PandaConfig } from '../config.js'
 const { defaultLocale } = PandaConfig
 
-export function relativeTo(dateStr: string, locale = 'zh') {
+export function relativeTo(dateStr: string, locale = 'ja') {
     locale ??= 'ja'
     locale = defaultLocale // force to default language
     return DateTime.fromISO(dateStr).toRelative({
