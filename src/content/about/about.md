@@ -6,12 +6,6 @@
 
 東北出身・東京在住。漫画と配信を見るのが好き。
 
-### Category
-[日記](https://www.erisato.com/categories/日記)
-[買い物](https://www.erisato.com/categories/買い物/)
-[健康・美容](https://www.erisato.com/categories/健康・美容/)
-[音楽](https://www.erisato.com/categories/音楽/)
-
 <br>
 
 <span style="font-size: 0.8em; color: #999;" >
