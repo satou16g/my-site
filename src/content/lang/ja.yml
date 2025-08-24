@@ -1,0 +1,24 @@
+nav:
+    posts: 記事
+    recent: 最近
+footer:
+    home: ホーム
+    rss: RSS
+    timeline: タイムライン
+    collection: コレクション
+    drafts: 下書き
+    contact: お問い合わせ
+    built-with: 使用技術
+    inspired-by: インスピレーション
+post:
+    back: 戻る
+    post_at: 投稿日
+    last_modified_at: 最終更新日
+
+message:
+    404-content: ページが見つかりません。
+    back-later: 作業中です。後ほど再度ご確認ください。
+    loading: 読み込み中...
+pagination:
+    previous: 前へ
+    next: 次へ
