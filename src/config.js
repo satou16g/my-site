@@ -2,7 +2,7 @@ export const PandaConfig = {
     title: '16g',
     description: '16g, a blog powered by Astro',
     start: '2016',
-    site: 'https://astro-theme-panda.vercel.app/',
+    site: 'https://www.erisato.com/',
     defaultLocale: 'en',
     navbar: [
         // {title: 'Posts', url: '/'}, // auto generated
