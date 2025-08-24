@@ -38,7 +38,7 @@ const result = keys(postsByYear)
     .filter((i: any) => !isNaN(i.year))
     .reverse()
 function getTitle(post) {
-    if (!locale || locale === 'zh') return post.title
+    if (!locale || locale === 'ja') return post.title
     const enTitle = post['title-en']
     if (!enTitle) return post.title
     return enTitle

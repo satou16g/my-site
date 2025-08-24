@@ -16,13 +16,13 @@ export async function getStaticPaths() {
                 slug: `${fileName}`
             },
             props: {
-                post_zh: post,
+                post_ja: post,
                 post_en: enPost
             }
         }
     })
 }
-const { Content, frontmatter } = Astro.props.post_zh
+const { Content, frontmatter } = Astro.props.post_ja
 let LocaleContent = Content
 const {locale} = useLocale(Astro.url)
 if (Astro.props.post_en && locale === 'en') {

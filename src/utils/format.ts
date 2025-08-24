@@ -3,7 +3,7 @@ import { PandaConfig } from '../config.js'
 const { defaultLocale } = PandaConfig
 
 export function relativeTo(dateStr: string, locale = 'zh') {
-    locale ??= 'zh'
+    locale ??= 'ja'
     locale = defaultLocale // force to default language
     return DateTime.fromISO(dateStr).toRelative({
         base: DateTime.now(),
@@ -11,7 +11,7 @@ export function relativeTo(dateStr: string, locale = 'zh') {
     })
 }
 
-export function formatDateMD(dateStr: string, locale: string = 'zh') {
+export function formatDateMD(dateStr: string, locale: string = 'ja') {
     const date = DateTime.fromISO(dateStr)
     locale = defaultLocale // force to default language
     if (locale === 'ja') {
@@ -20,7 +20,7 @@ export function formatDateMD(dateStr: string, locale: string = 'zh') {
     return date.toFormat('MM/dd')
 }
 
-export function formatDateYMD(dateString: string, locale: string = 'zh') {
+export function formatDateYMD(dateString: string, locale: string = 'ja') {
     locale = defaultLocale // force to default language
     const date = DateTime.fromISO(dateString)
     if (locale === 'ja') {
