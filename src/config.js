@@ -3,7 +3,7 @@ export const PandaConfig = {
     description: '16g, a blog powered by Astro',
     start: '2016',
     site: 'https://astro-theme-panda.vercel.app/',
-    defaultLocale: 'ja',
+    defaultLocale: 'en',
     navbar: [
         // {title: 'Posts', url: '/'}, // auto generated
         { title: 'about', url: '/about/' },
