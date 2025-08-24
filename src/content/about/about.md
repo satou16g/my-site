@@ -10,6 +10,7 @@
 <a href="https://www.erisato.com/categories/日記">日記</a>
 <a href="https://www.erisato.com/categories/買い物/">買い物</a>
 <a href="https://www.erisato.com/categories/健康・美容/">健康・美容</a>
+<a href="https://www.erisato.com/categories/音楽/">音楽</a>
 
 <br>
 
