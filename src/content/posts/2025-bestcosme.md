@@ -43,11 +43,10 @@ categories: ['健康・美容']
   
 #### 写真にないけどよかったもの  
 
-![Upt マイルドピーリングエッセンス](/images/20251230upt.webp "Upt 公式サイトより")
+![Uptマイルドピーリングエッセンス, celvokeレアグロウプライマー](/images/20251230.webp "公式サイトより")
 
 **[Upt マイルドピールエッセンス](https://uptofficial.jp/shop/products/4595121188561)**  
 Xで見かけて買った。マンデル酸、グリシルグリシン、アゼライン酸と毛穴特化で欲しい成分が一通り入っているのに全然バズってなくてびびる。
 
-![celvoke レアグロウプライマー](/images/20251230celvoke.webp "Celvoke 公式サイトより")
 **[celvoke レアグロウプライマー](https://celvoke.com/Form/Product/ProductDetail.aspx?shop=0&pid=4570106734964&bid=CV01&cat=CGR302102)**  
 つやつやにならず、ある程度カバー力もあって、伸ばした後サラッとなるところが好き。
