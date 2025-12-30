@@ -1,6 +1,6 @@
 export const PandaConfig = {
-    title: '16g',
-    description: '16g, a blog powered by Astro',
+    title: 'erst',
+    description: 'erst, a blog powered by Astro',
     start: '2016',
     site: 'https://www.erisato.com/',
     defaultLocale: 'en',
