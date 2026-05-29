@@ -1,15 +1,16 @@
-export const PandaConfig = {
-    title: 'erst',
-    description: 'erst, a blog powered by Astro',
-    start: '2016',
-    site: 'https://www.erisato.com/',
-    defaultLocale: 'ja',
-    navbar: [
-        // {title: 'Posts', url: '/'}, // auto generated
-        { title: 'about', url: '/about/' },
-        { title: 'contact', url: 'https://forms.gle/dEkYCg1qyata5EHA8'}
-    ],
-    footer: [
-        {  }
-    ]
-}
+export const metaData = {
+  baseUrl: "https://erisato.com/",
+  title: "erst",
+  name: "SE",
+  ogImage: "/opengraph-image.png",
+  description:
+    "Writing on life, hobbies, interests.",
+};
+
+export const socialLinks = {
+  twitter: "",
+  github: "",
+  instagram: "",
+  linkedin: "",
+  email: "",
+};

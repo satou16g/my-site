@@ -1,0 +1,69 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()
+);
+
+// --- ここから追加：年ごとにグループ分けする処理 ---
+const postsByYear = posts.reduce((acc, post) => {
+  const year = post.data.publishedAt.getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {} as Record<string, typeof posts>);
+
+// 年を降順（新しい順）に並べ替える
+const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+// --- ここから追加：日付を「MM/DD」形式にする関数 ---
+const formatMD = (date: Date) => {
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${month}/${day}`; // 例: 05/29
+};
+
+const title = "Blog";
+const description = "Astrofolio Blog";
+---
+
+<Base title={title} description={description}>
+  <section>
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">Our Blog</h1>
+    <div>
+      {
+        years.map((year) => (
+          <div class="mb-10">
+            {/* 年の見出し（デザインをテンプレートに合わせて調整） */}
+            <h2 class="text-2xl font-extrabold mb-4 text-black dark:text-white">
+              {year}
+            </h2>
+            
+            <div>
+              {
+                postsByYear[year].map((post) => (
+                  <a
+                    class="flex flex-col space-y-1 mb-4 transition-opacity duration-200 hover:opacity-80"
+                    href={`/blog/${post.slug}`}>
+                    <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-2">
+                      <p class="text-black dark:text-white tracking-tight">
+                        {post.data.title}
+                      </p>
+                      {/* 日付を 05/29 の形式で表示 */}
+                      <p class="text-neutral-600 dark:text-neutral-400 tabular-nums text-sm font-mono">
+                        {formatMD(post.data.publishedAt)}
+                      </p>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Base>

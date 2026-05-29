@@ -1,7 +1,66 @@
 ---
-import BlogListLayout from '@layouts/BlogListLayout.astro'
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
 
-export const prerender = true
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()
+);
+
+const postsByYear = posts.reduce((acc, post) => {
+  const year = post.data.publishedAt.getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {} as Record<string, typeof posts>);
+
+const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+const formatMD = (date: Date) => {
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${month}/${day}`;
+};
 ---
 
-<BlogListLayout title="erst" tag="" category="" />
+<Base>
+  <section class="mt-2">
+    <div class="space-y-7">
+      {
+        years.map((year) => (
+          <div>
+            <h2 class="text-2xl font-extrabold mb-2.5 text-black dark:text-white">
+              {year}
+            </h2>
+            
+            <div class="pl-3">
+              {
+                postsByYear[year].map((post) => (
+                  /* --- 修正：mb-1 から 「mb-1.5（6px）」 に変更し、絶妙な行間アキに微調整しました --- */
+                  <a
+                    class="group block w-full min-w-0 mb-1.5"
+                    href={`/blog/${post.slug || post.id}`}>
+                    
+                    <div class="w-full flex flex-row items-center space-x-4">
+                      
+                      <p class="text-neutral-600 dark:text-neutral-400 text-base flex-shrink-0 tabular-nums tracking-normal">
+                        {formatMD(post.data.publishedAt)}
+                      </p>
+                      
+                      <p class="text-black dark:text-white tracking-wide flex-1 truncate group-hover:underline group-hover:underline-offset-4 group-hover:decoration-[#00a3af] group-hover:decoration-[1.5px]">
+                        {post.data.title}
+                      </p>
+                      
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+            
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Base>
