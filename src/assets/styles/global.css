@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2c2c2c;
+  color: #555555;
 }
 
 header, nav, .nav, [class*="nav"], [class*="menu"] {
@@ -46,17 +46,18 @@ nav a {
   color: #666666;
 }
 
-.post-item-title, .post-page-title {
+.post-item-title {
   color: #2c2c2c;
 }
 
 .post-page-title {
+  color: #555555;
   letter-spacing: 0.03em;
 }
 
 .prose {
   --tw-prose-body: #2c2c2c;
-  --tw-prose-headings: #2c2c2c;
+  --tw-prose-headings: #555555;
   --tw-prose-links: #2c2c2c;
   --tw-prose-bold: #2c2c2c;
   --tw-prose-counters: #555555;
@@ -176,20 +177,24 @@ blockquote p:first-of-type::before { content: none; }
 blockquote p:first-of-type::after { content: none; }
 .title { text-wrap: balance; }
 
-[data-theme="dark"] body,
+[data-theme="dark"] body {
+  color: #cbcbcb;
+}
+
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, 
 [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
-  color: #cbcbcb;
+  color: #888888;
 }
 
 [data-theme="dark"] nav a { color: #cbcbcb; }
 [data-theme="dark"] .archive-year { color: #888888; }
 [data-theme="dark"] .post-date, [data-theme="dark"] .post-page-date { color: #a0a0a0; }
-[data-theme="dark"] .post-item-title, [data-theme="dark"] .post-page-title { color: #e2e2e2; }
+[data-theme="dark"] .post-item-title { color: #e2e2e2; }
+[data-theme="dark"] .post-page-title { color: #888888; }
 
 [data-theme="dark"] .prose {
   --tw-prose-body: #cbcbcb;
-  --tw-prose-headings: #e2e2e2;
+  --tw-prose-headings: #888888;
   --tw-prose-links: #cbcbcb;
   --tw-prose-bold: #e2e2e2;
   --tw-prose-counters: #888888;
