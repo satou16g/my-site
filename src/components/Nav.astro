@@ -1,7 +1,6 @@
 ---
 import { metaData } from "../config";
 
-// メニューの項目
 const navItems = {
   "/about": { name: "About" },
   "https://forms.gle/dEkYCg1qyata5EHA8": { name: "Contact" },
@@ -24,25 +23,21 @@ const navItems = {
             href={path}
             target={path.startsWith("http") ? "_blank" : undefined}
             rel={path.startsWith("http") ? "noopener noreferrer" : undefined}
-            /* --- 修正：decoration-wavy（波線）を削除し、直線のunderlineへ。色は同じ青緑（#00a3af）に統一 --- */
-            class="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative text-sm sm:text-base hover:underline hover:underline-offset-4 hover:decoration-[#00a3af] hover:decoration-[1.5px]">
+            class="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative text-base sm:text-lg tracking-wider hover:underline hover:underline-offset-4 hover:decoration-[#00a3af] hover:decoration-[1.5px]">
             {name}
           </a>
         ))
       }
       
-      {/* 右端のボタン */}
       <button
         id="theme-toggle"
         aria-label="Toggle theme"
         class="flex items-center justify-center transition-opacity duration-300 hover:opacity-90 w-6 h-6 ml-1 -mr-1 flex-shrink-0">
         
-        {/* ライトモード時：月を表示 */}
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-[#1c1c1c] dark:hidden">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
         
-        {/* ダークモード時：太陽を表示 */}
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-[#D4D4D4] hidden dark:block">
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>

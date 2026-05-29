@@ -12,70 +12,59 @@
   color: #fefefe;
 }
 
-/* Dark theme colors */
 [data-theme="dark"] {
   background-color: #121212;
 }
 
 html {
   min-width: 360px;
-  letter-spacing: -0.01em; /* 全体の字間をほんの少し狭く引き締め */
+  letter-spacing: -0.01em;
 }
 
-/* 全体の基本文字サイズと、目に優しい極濃グレー（#2c2c2c） */
 body {
   font-size: 15px;
   color: #2c2c2c;
 }
 
-/* 見出しもマイルドで上品な黒（#1a1a1a）に固定 */
 h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
 }
 
-/* メニュー部分だけは元の読みやすいサイズ（16px）をキープ */
 header, nav, .nav, [class*="nav"], [class*="menu"] {
   font-size: 16px;
 }
 
-/* ==========================================
-   🎯 【完全移行】トップページ（記事一覧）用の文字色管理
-   ========================================== */
-
-/* 1. 西暦（2026など）の色（サイズはIndex側にお任せ） */
 .archive-year {
   color: #555555 !important;     
 }
 
-/* 2. 記事一覧の日付（05/30など）の色 */
 .post-date {
   color: #666666 !important;
 }
 
-/* 3. 記事一覧のタイトル色 */
 .post-item-title {
   color: #2c2c2c !important;
 }
 
+.post-page-title {
+  color: #1a1a1a !important;
+}
 
-/* ==========================================
-   記事本文（Markdown）用のデザイン設定
-   ========================================== */
+.post-page-date {
+  color: #666666 !important;
+}
 
-/* 記事本文の中の「見出し2」は元の大きさをキープ */
 .prose h2 {
   font-size: 1.5rem !important;
   color: #1a1a1a !important;
 }
 
-/* 記事本文やAboutページなどの長文の行送り・両端揃え */
 .prose p, .prose li {
   line-height: 1.8;
   text-align: justify;
   text-justify: inter-ideograph;
 }
 
-/* マークダウンのリスト（箇条書き）の上下の隙間を引き締める */
 .prose li {
   margin-top: 0.25em !important;
   margin-bottom: 0.25em !important;
@@ -141,7 +130,6 @@ header, nav, .nav, [class*="nav"], [class*="menu"] {
   @apply m-0;
 }
 
-/* すべての見出しを、ブレずに「しっかり太字」＆「心地よい字間アキ」に統一 */
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   @apply font-bold! tracking-wide!;
 }
@@ -199,7 +187,6 @@ blockquote p:first-of-type::after {
   text-wrap: balance;
 }
 
-/* --- 🌙 ダークモード時の文字色もすべてCSS側で制御します --- */
 [data-theme="dark"] body {
   color: #cbcbcb;
 }
@@ -214,6 +201,12 @@ blockquote p:first-of-type::after {
 }
 [data-theme="dark"] .post-item-title {
   color: #cbcbcb !important;
+}
+[data-theme="dark"] .post-page-title {
+  color: #e2e2e2 !important;
+}
+[data-theme="dark"] .post-page-date {
+  color: #a0a0a0 !important;
 }
 
 [data-theme="dark"] .astro-code,

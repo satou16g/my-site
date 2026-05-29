@@ -25,16 +25,15 @@ const formatDate = (date: Date) => {
   <article class="mt-4">
     
     <div class="mb-4">
-      <h1 class="text-2xl font-bold tracking-tight text-black dark:text-white mb-1.5">
+      <h1 class="post-page-title text-2xl font-bold tracking-tight mb-1.5">
         {post.data.title}
       </h1>
-      {/* --- 修正：末尾に「text-right」を追加し、日付を美しく右寄せにしました --- */}
-      <p class="text-neutral-500 dark:text-neutral-400 text-sm tabular-nums text-right">
+      
+      <p class="post-page-date text-sm tabular-nums text-right">
         {post.data.publishedAt ? formatDate(post.data.publishedAt) : ''}
       </p>
     </div>
 
-    {/* 記事の本文 */}
     <div class="prose prose-neutral dark:prose-invert max-w-none">
       <Content />
     </div>
