@@ -19,7 +19,17 @@
 
 html {
   min-width: 360px;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.01em; /* 💡 字間を元の 0.03em から「ほんの少し狭く」引き締めました */
+}
+
+/* 💡 メニュー以外の全体の文字サイズを少しだけ小さく設定（標準の16pxから15pxへ） */
+body {
+  font-size: 15px;
+}
+
+/* 💡 メニュー部分（headerやnav）だけは元の読みやすいサイズ（16px）をキープ */
+header, nav, .nav, [class*="nav"], [class*="menu"] {
+  font-size: 16px;
 }
 
 /* 記事本文やAboutページなどの長文の行送り・両端揃え */
