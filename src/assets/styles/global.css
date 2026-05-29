@@ -26,12 +26,16 @@ body {
   color: #2c2c2c;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #1a1a1a;
+h1, h2, h3, h4, h5, h6, .post-page-title {
+  color: #2c2c2c !important;
 }
 
 header, nav, .nav, [class*="nav"], [class*="menu"] {
   font-size: 16px;
+}
+
+nav a {
+  color: #2c2c2c !important;
 }
 
 .archive-year {
@@ -47,7 +51,8 @@ header, nav, .nav, [class*="nav"], [class*="menu"] {
 }
 
 .post-page-title {
-  color: #1a1a1a !important;
+  color: #2c2c2c !important;
+  letter-spacing: 0.03em !important;
 }
 
 .post-page-date {
@@ -56,7 +61,7 @@ header, nav, .nav, [class*="nav"], [class*="menu"] {
 
 .prose h2 {
   font-size: 1.5rem !important;
-  color: #1a1a1a !important;
+  color: #2c2c2c !important;
 }
 
 .prose p, .prose li {
@@ -190,8 +195,11 @@ blockquote p:first-of-type::after {
 [data-theme="dark"] body {
   color: #cbcbcb;
 }
-[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
-  color: #e2e2e2;
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6, [data-theme="dark"] .post-page-title {
+  color: #e2e2e2 !important;
+}
+[data-theme="dark"] nav a {
+  color: #cbcbcb !important;
 }
 [data-theme="dark"] .archive-year {
   color: #888888 !important;
@@ -201,9 +209,6 @@ blockquote p:first-of-type::after {
 }
 [data-theme="dark"] .post-item-title {
   color: #cbcbcb !important;
-}
-[data-theme="dark"] .post-page-title {
-  color: #e2e2e2 !important;
 }
 [data-theme="dark"] .post-page-date {
   color: #a0a0a0 !important;
