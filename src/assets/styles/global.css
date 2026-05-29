@@ -21,109 +21,187 @@ html {
   letter-spacing: -0.01em;
 }
 
-/* ==========================================================================
-   【超強力】すべてのパーツの文字色を「黒に近いグレー（#2c2c2c）」に強制固定するルール
-   ========================================================================== */
-body, 
-h1, h2, h3, h4, h5, h6, 
-p, span, a, li, 
-.post-page-title, 
-.post-item-title, 
-nav a, 
-.prose, 
-.prose * {
-  color: #2c2c2c !important;
+body {
+  font-size: 15px;
+  color: #2c2c2c;
 }
 
-/* 例外パーツ：日付や年などの少し淡くしたい部分のみ個別に指定 */
-.archive-year {
-  color: #555555 !important;     
-}
-.post-date, .post-page-date {
-  color: #666666 !important;
-}
-.not-prose li {
-  font-size: 11px !important;
-  color: #555555 !important;
+h1, h2, h3, h4, h5, h6 {
+  color: #2c2c2c;
 }
 
-/* レイアウト・スタイルの基本設定 */
 header, nav, .nav, [class*="nav"], [class*="menu"] {
   font-size: 16px;
 }
+
+nav a {
+  color: #2c2c2c;
+}
+
+.archive-year {
+  color: #555555;
+}
+
+.post-date, .post-page-date {
+  color: #666666;
+}
+
+.post-item-title, .post-page-title {
+  color: #2c2c2c;
+}
+
 .post-page-title {
-  letter-spacing: 0.03em !important;
+  letter-spacing: 0.03em;
 }
+
+.prose {
+  --tw-prose-body: #2c2c2c;
+  --tw-prose-headings: #2c2c2c;
+  --tw-prose-links: #2c2c2c;
+  --tw-prose-bold: #2c2c2c;
+  --tw-prose-counters: #555555;
+  --tw-prose-bullets: #555555;
+  --tw-prose-quotes: #555555;
+  color: var(--tw-prose-body);
+}
+
 .prose h2 {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
 }
+
 .prose p, .prose li {
-  font-size: 15px !important;
+  font-size: 15px;
   line-height: 1.8;
   text-align: justify;
   text-justify: inter-ideograph;
 }
+
 .prose li {
-  margin-top: 0.25em !important;
-  margin-bottom: 0.25em !important;
-}
-.prose li > p {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
 
-/* リンクや装飾の設定 */
+.prose li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.not-prose {
+  color: #555555;
+}
+
+.not-prose h3 {
+  color: #555555;
+}
+
+.not-prose li {
+  font-size: 11px;
+  color: #555555;
+}
+
 .prose .anchor {
-  @apply absolute invisible no-underline;
+  position: absolute;
+  visibility: hidden;
+  text-decoration: none;
   margin-left: -1em;
   padding-right: 0.5em;
   width: 80%;
   max-width: 700px;
   cursor: pointer;
 }
-.anchor:hover { @apply visible; }
+
+.anchor:hover {
+  visibility: visible;
+}
+
 .prose a {
   @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em] font-normal;
 }
-.prose a:hover { @apply dark:decoration-neutral-400 decoration-neutral-600; }
-.prose .anchor:after { @apply text-neutral-300 dark:text-neutral-700; content: "#"; }
-.prose *:hover > .anchor { @apply visible; }
-.prose pre { @apply !bg-[#F7F7F7] dark:bg-[#181818] rounded-lg overflow-x-auto; }
-.prose code { @apply px-1 py-0.5 rounded-lg; }
-.prose pre code { @apply p-0; border: initial; line-height: 1.5; }
-.prose code span { @apply font-medium; }
-.prose img { @apply m-0; }
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { @apply font-bold! tracking-wide!; }
-.prose strong { @apply font-bold; }
-.prose > :first-child { margin-top: 1.25em !important; margin-bottom: 1.25em !important; }
+
+.prose a:hover {
+  @apply dark:decoration-neutral-400 decoration-neutral-600;
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: "#";
+}
+
+.prose *:hover > .anchor {
+  visibility: visible;
+}
+
+.prose pre {
+  @apply !bg-[#F7F7F7] dark:bg-[#181818] rounded-lg overflow-x-auto;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  margin: 0;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply font-bold! tracking-wide!;
+}
+
+.prose strong {
+  @apply font-bold;
+}
+
+.prose > :first-child {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
 
 pre::-webkit-scrollbar { display: none; }
 pre { -ms-overflow-style: none; scrollbar-width: none; }
 input[type="text"], input[type="email"] { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .prose .tweet a { text-decoration: inherit; font-weight: 500; }
 table { display: block; max-width: fit-content; overflow-x: auto; white-space: nowrap; }
-.prose .callout > p { margin: 0 !important; }
+.prose .callout > p { margin: 0; }
 blockquote p:first-of-type::before { content: none; }
 blockquote p:first-of-type::after { content: none; }
 .title { text-wrap: balance; }
 
-/* ==========================================================================
-   【超強力】ダークモード用の強制カラー固定（眩しくない明るいグレー）
-   ========================================================================== */
 [data-theme="dark"] body,
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, 
-[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
-[data-theme="dark"] p, [data-theme="dark"] span, [data-theme="dark"] a, [data-theme="dark"] li,
-[data-theme="dark"] .post-page-title,
-[data-theme="dark"] .post-item-title,
-[data-theme="dark"] nav a,
-[data-theme="dark"] .prose,
-[data-theme="dark"] .prose * {
-  color: #cbcbcb !important;
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: #cbcbcb;
 }
 
-[data-theme="dark"] .archive-year { color: #888888 !important; }
-[data-theme="dark"] .post-date, [data-theme="dark"] .post-page-date { color: #a0a0a0 !important; }
+[data-theme="dark"] nav a { color: #cbcbcb; }
+[data-theme="dark"] .archive-year { color: #888888; }
+[data-theme="dark"] .post-date, [data-theme="dark"] .post-page-date { color: #a0a0a0; }
+[data-theme="dark"] .post-item-title, [data-theme="dark"] .post-page-title { color: #e2e2e2; }
+
+[data-theme="dark"] .prose {
+  --tw-prose-body: #cbcbcb;
+  --tw-prose-headings: #e2e2e2;
+  --tw-prose-links: #cbcbcb;
+  --tw-prose-bold: #e2e2e2;
+  --tw-prose-counters: #888888;
+  --tw-prose-bullets: #888888;
+  --tw-prose-quotes: #888888;
+}
+
+[data-theme="dark"] .not-prose,
+[data-theme="dark"] .not-prose h3,
+[data-theme="dark"] .not-prose li {
+  color: #888888;
+}
 
 [data-theme="dark"] .astro-code,
 [data-theme="dark"] .astro-code span {
