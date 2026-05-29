@@ -71,6 +71,10 @@ nav a {
   text-justify: inter-ideograph;
 }
 
+.not-prose li {
+  font-size: 11px !important;
+}
+
 .prose li {
   margin-top: 0.25em !important;
   margin-bottom: 0.25em !important;
@@ -213,6 +217,9 @@ blockquote p:first-of-type::after {
 }
 [data-theme="dark"] .post-page-date {
   color: #a0a0a0 !important;
+}
+[data-theme="dark"] .not-prose li {
+  color: #555555 !important;
 }
 
 [data-theme="dark"] .astro-code,
