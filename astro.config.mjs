@@ -1,70 +1,79 @@
-import {defineConfig} from 'astro/config'
-import sitemap from '@astrojs/sitemap'
-import yaml from '@rollup/plugin-yaml'
-import mdx from '@astrojs/mdx'
-import partytown from '@astrojs/partytown'
-import {remarkModifiedTime} from './src/plugins/remark-modified-time.mjs'
-import remarkPanGu from 'remark-pangu'
-import UnoCSS from 'unocss/astro'
-import expressiveCode from 'astro-expressive-code'
-import {ExpressiveCodeTheme} from '@expressive-code/core'
-import {readFileSync} from 'fs'
-import {parse} from 'jsonc-parser'
-import remarkDirective from "remark-directive";
-import {RDNotePlugin, RDBilibiliPlugin} from "./src/plugins/remark-directive.mjs";
-import {PandaConfig} from "./src/config.js";
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@astrojs/react";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import icon from "astro-icon";
+import opengraphImages, { presets } from "astro-opengraph-images";
 
-const nightOwlDark = new ExpressiveCodeTheme(
-    parse(readFileSync('./src/styles/expressive-code/night-owl-dark.jsonc', 'utf-8'))
-)
-const nightOwlLight = new ExpressiveCodeTheme(
-    parse(readFileSync('./src/styles/expressive-code/night-owl-light.jsonc', 'utf-8'))
-)
-
-
-
-
-const {site, defaultLocale} = PandaConfig
 // https://astro.build/config
 export default defineConfig({
-    vite: {
-        plugins: [yaml()],
-    },
-    prefetch: true,
-    site,
-    scopedStyleStrategy: 'class',
-    trailingSlash: 'always',
-    build: {
-        format: 'directory'
-    },
-    markdown: {
-        syntaxHighlight: false,
-        remarkPlugins: [remarkDirective, RDNotePlugin, RDBilibiliPlugin, remarkModifiedTime],
-        remarkRehype: {
-            footnoteLabel: ' '
-        }
-    },
-    integrations: [
-        UnoCSS(),
-        sitemap(),
-        expressiveCode({
-            themes: [nightOwlDark, nightOwlLight],
-            // デフォルトテーマを 'nightOwlLight' に設定
-            defaultTheme: 'nightOwlLight',
-            // CSSセレクタをテーマのタイプ（light/dark）に合わせる
-            themeCssSelector: (theme) => {
-                // nightOwlLight のタイプは 'light'
-                return `[data-theme='${theme.type}']`
-            }
-        }),
-        mdx(),
-        partytown()
-    ],
-    output: 'static',
-    // 画像処理の設定
-    image: {
-        service: {
-            entrypoint: 'astro/assets/services/sharp',
+  site: "https://astrofolio.pages.dev",
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  integrations: [
+    mdx({
+      image: {
+        domains: ["unsplash.com"],
+      },
+      optimize: true,
+      shikiConfig: {
+        themes: {
+          light: "github-light",
+          dark: "github-dark",
+          langs: [],
         },
-    }
-})
+      },
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: "prepend",
+            properties: {
+              className: "anchor",
+            },
+          },
+        ],
+        rehypeKatex,
+      ],
+      gfm: true,
+    }),
+    sitemap(),
+    react({
+      experimentalReactChildren: true,
+    }),
+    icon({
+      include: {
+        "fa6-solid": ["rss", "circle-half-stroke"],
+        tabler: ["mail-filled"],
+        "fa6-brands": ["x-twitter", "github", "instagram", "linkedin-in"],
+      },
+    }),
+    sitemap(),
+    opengraphImages({
+      render: presets.waveSvg,
+      options: {
+        fonts: [
+          {
+            name: "Roboto",
+            name: "Roboto",
+            name: "Roboto",
+            weight: 400,
+            style: "normal",
+            data: fs.readFileSync(
+              "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff"
+            ),
+          },
+        ],
+      },
+    }),
+  ],
+  output: "static",
+});
