@@ -30,25 +30,27 @@ const formatMD = (date: Date) => {
       {
         years.map((year) => (
           <div>
-            <h2 class="text-2xl font-extrabold mb-2.5 text-black dark:text-white">
+            <h2 class="archive-year text-xl font-bold mb-2.5">
               {year}
             </h2>
             
             <div class="pl-3">
               {
                 postsByYear[year].map((post) => (
-                  /* --- 修正：mb-1 から 「mb-1.5（6px）」 に変更し、絶妙な行間アキに微調整しました --- */
+                  {/* 💡 【行間の微調整はここ！】
+                      下の余白を mb-1.5 から「mb-1」に狭めました。
+                      もっと詰めたければ mb-0.5 や mb-0 に書き換えるだけでOKです */}
                   <a
-                    class="group block w-full min-w-0 mb-1.5"
+                    class="group block w-full min-w-0 mb-1"
                     href={`/blog/${post.slug || post.id}`}>
                     
                     <div class="w-full flex flex-row items-center space-x-4">
                       
-                      <p class="text-neutral-600 dark:text-neutral-400 text-base flex-shrink-0 tabular-nums tracking-normal">
+                      <p class="post-date text-base flex-shrink-0 tabular-nums tracking-normal">
                         {formatMD(post.data.publishedAt)}
                       </p>
                       
-                      <p class="text-black dark:text-white tracking-wide flex-1 truncate group-hover:underline group-hover:underline-offset-4 group-hover:decoration-[#00a3af] group-hover:decoration-[1.5px]">
+                      <p class="post-item-title tracking-wide flex-1 truncate group-hover:underline group-hover:underline-offset-4 group-hover:decoration-[#00a3af] group-hover:decoration-[1.5px]">
                         {post.data.title}
                       </p>
                       
