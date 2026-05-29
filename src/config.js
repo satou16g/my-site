@@ -3,7 +3,7 @@ export const PandaConfig = {
     description: 'erst, a blog powered by Astro',
     start: '2016',
     site: 'https://www.erisato.com/',
-    defaultLocale: 'en',
+    defaultLocale: 'ja',
     navbar: [
         // {title: 'Posts', url: '/'}, // auto generated
         { title: 'about', url: '/about/' },

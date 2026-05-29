@@ -7,7 +7,7 @@ import { parseSlug } from '@utils/file'
 import { useLocale } from '@utils/locale'
 import { formatDateMD } from '@utils/format'
 const { path, t, locale } = useLocale(Astro.url)
-let { tag, category } = Astro.props
+let { title, tag, category } = Astro.props
 const posts = (await Astro.glob('../content/posts/**/*.{md,mdx}')).map((i) => {
     i.frontmatter['url'] =  parseSlug(i.file) + '/'
     return i.frontmatter
@@ -45,7 +45,7 @@ function getTitle(post) {
 }
 ---
 
-<Layout title={t('nav.posts')}>
+<Layout title={title || t('nav.posts')}>
     <main  class="mt-8">
         {
             result.map((yearItem) => {
