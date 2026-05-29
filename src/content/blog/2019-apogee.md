@@ -1,6 +1,6 @@
 ---
 title: "APOGEEの話"
-description: "APOGEEワンマンライブ2019『CHRONICLE』に行ってきました。昨年のライブですでに発表されていたけれど、この日でベースの内垣さんはAPOGEEを脱退することが決まっていた。そのため、タイトルにもあるとおり、まさにAPOGEEの歴史を紡ぐようなセットリストだった。"
+description: "APOGEEワンマンライブ2019『CHRONICLE』に行ってきました。この日でベースの内垣さんはAPOGEEを脱退することが決まっていた。そのため、タイトルにもあるとおり、まさにAPOGEEの歴史を紡ぐようなセットリストだった。"
 pubDate: 2019-03-05
 tags: ['音楽','APOGEE']
 categories: ['音楽']
